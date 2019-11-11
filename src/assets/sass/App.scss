@@ -1,0 +1,37 @@
+@import './mixins.scss';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, #root, #root>div {
+    height: 100%;
+    body{
+        @include reversBack;
+        @include mainFont;
+    }
+}
+
+a{
+    @include back;
+    text-decoration: none;
+    transition: .3s;
+}
+a:hover{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.main {
+	flex: 1 0 auto;
+}
+.footer,.header {
+	flex: 0 0 auto;
+}

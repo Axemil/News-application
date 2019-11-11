@@ -1,0 +1,18 @@
+@import './vars.scss', './fonts.scss';
+
+@mixin mainFont {
+    font: 14px/1.4 $mainFont;
+}
+@mixin back {
+    background: $red;
+    color: $main;
+}
+@mixin reversBack {
+    background: $main;
+    color: $red!important;
+}
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
