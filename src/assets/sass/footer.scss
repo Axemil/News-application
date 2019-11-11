@@ -1,1 +1,9 @@
 @import './sass-add/mixins.scss';
+@import './sass-add/vars.scss';
+.footer{
+  background: rgb(240,87,97);
+  background: radial-gradient(circle, rgba(240,87,97,1) 35%, rgba(255,88,77,1) 100%);
+  color: $main;
+  box-shadow: -1px -1px 10px rgba(0,0,0,0.2);
+  padding: 1% 0;
+}
