@@ -1,7 +1,34 @@
 @import './sass-add/mixins.scss';
 @import './sass-add/vars.scss';
 .header{
-  background: $red;
+  background: rgb(240,87,97);
+  background: radial-gradient(circle, rgba(240,87,97,1) 35%, rgba(255,88,77,1) 100%);
   color: $main;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 1% 0;
+}
+.div__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  font-size: 2rem;
+}
+.div__header>nav>ul{
+  display: flex;
+  list-style: none;
+}
+.div__header ul>li{
+  padding: 0 20px;
+  font-size: 1.3rem;
+}
+.div__header ul>li:last-child{
+  padding: 0 0 0 20px;
+}
+.link-hover{
+  transition: .3s;
+}
+.link-hover:hover{
+  color: rgb(255, 255, 255);
 }
