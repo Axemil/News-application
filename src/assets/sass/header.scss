@@ -34,3 +34,33 @@
 .link-hover:hover{
   color: rgb(255, 255, 255);
 }
+.drawerIcon{
+  font-size: 1.9rem;
+}
+.drawerMenu{
+  position: absolute;
+  padding: 2%;
+  height: 100vh;
+  background: rgb(240,87,97);
+  background: radial-gradient(circle, rgba(240,87,97,1) 35%, rgba(255,88,77,1) 100%);
+  top: 100%;
+  right: -100%;
+  transition: .5s;
+}
+.active {
+  right: 0!important;
+}
+.drawerMenu ul{
+  list-style: none;
+}
+.drawerMenu ul>li{
+  margin: 20% 0;
+}
+@media (max-width: 1100px) {
+  .div__header>nav{
+    display: none;
+  }
+  .drawer{
+    display: block;
+  }
+}
