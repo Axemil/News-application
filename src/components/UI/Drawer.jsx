@@ -18,7 +18,7 @@ const Drawer = () => {
   const handler = () => document.querySelector('.drawerMenu').classList.toggle('active');
   return (
     <div>
-      <div onClick={handler} className="drawerIcon wow fadeInRight">
+      <div onClick={handler} data-wow-delay="0.3s" className="drawerIcon wow fadeInRight">
         <FontAwesomeIcon icon={faServer} />
       </div>
       <div className="drawerMenu">
