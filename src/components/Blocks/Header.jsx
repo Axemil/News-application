@@ -10,7 +10,7 @@ const Header = () => {
     const wow = new WOW();
     wow.init();
   })
-  const handler = () => document.querySelector('.drawerMenu').classList.toggle('active');
+  const handler = () => document.querySelector('.drawerMenu').classList.remove('active');
   return (
     <div className={handler} className="header">
       <div className="div__header">
