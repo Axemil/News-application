@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="div-footer">
-        <h3 className="wow fadeInLeft" data-wow-delay="0.3s"><a href="https://t.me/axemilon"><FontAwesomeIcon icon={faTelegram}/> Телеграмм</a></h3>
+        <h3 className="wow fadeInLeft" data-wow-delay="0.3s"><a href="https://t.me/axemilon"><FontAwesomeIcon icon={faTelegram}/> Влад</a><a href="https://t.me/axemilon" style={{padding: '0 0 0 10px'}}><FontAwesomeIcon icon={faTelegram}/> Андрей</a></h3>
         <h3 className="wow fadeInRight" data-wow-delay="0.3s"><a href="https://github.com/Axemil/News-application/tree/develop"><FontAwesomeIcon icon={faGithub}/> Github</a></h3>
       </div>
       <h4 className="wow fadeInUp" data-wow-delay="0.3s" style={{textAlign: 'center'}}>Copyright @ 2019 Kordonets . All rights reserved</h4>
