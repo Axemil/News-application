@@ -1,4 +1,65 @@
 @import './sass-add/mixins.scss';
 .main{
-  padding: 8% 0 0 0;
+  padding: 70px 0 0 0;
+}
+.page{
+  padding: 30px 0 0 0;
+}
+.list-cards{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.news-card{
+  margin: 20px 10px;
+  border: 1px solid #ddd;
+  background: rgb(240,87,97);
+  background: radial-gradient(circle, rgba(240,87,97,1) 35%, rgba(255,88,77,1) 100%);
+  color: rgb(238, 238, 238);
+  border-radius: 10px;
+  display: inline-block;
+  width: 450px;
+  box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.2);
+
+}
+.news-card:hover{
+  box-shadow: 1px 1px 20px rgba($color: #000000, $alpha: 0.2);
+}
+.logo-card{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-position: center;
+  background-size: cover;
+}
+.title-card{
+  background: rgba($color: #000000, $alpha: 0.3);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 1.3rem;
+  padding: 10px 10px 40px 10px;
+}
+.body-card{
+  padding: 10px;
+}
+.description-card{
+  padding: 0 0 20px 0;
+  text-align: justify;
+}
+.author-card{
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .main{
+    padding: 30px 0 0 0;
+  }
+}
+@media (max-width: 1500px) {
+  .main{
+    padding: 30px 0 0 0;
+  }
+  .list-cards{
+    justify-content: center;
+  }
 }
