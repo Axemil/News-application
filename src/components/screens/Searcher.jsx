@@ -6,7 +6,6 @@ import WOW from "wow.js";
 
 const Searcher = () => {
   //Заглушки для дропдауна
-  const typeArray = ["top-headlines", "everything"];
   const countryArray = ["us", "ua", "gb", "ru", "it", "jp", "pl"];
   const categoryArray = [
     "business",
@@ -20,21 +19,46 @@ const Searcher = () => {
   //Массив новостей
   const [news, setNews] = useState([]);
   //Стейты для конфигураций запроса
-  const [typeSearching, setTypeSearching] = useState("");
-  const [typeCountry, setTypeCountry] = useState("");
-  const [typeCategory, setTypeCategory] = useState("");
+  const [typeCountry, setTypeCountry] = useState("business");
+  const [typeCategory, setTypeCategory] = useState("us");
   //Строка с запросом
   const apiKey = "apiKey=4df43511f328465aa591c132a2dcfecf";
-  const request = `https://newsapi.org/v2/${typeSearching}?q=${typeCategory}&country=${typeCountry}&sortBy=publishedAt&${apiKey}`;
+
   useEffect(() => {
     const wow = new WOW();
     wow.init();
   });
-  const submitSearch = () => {};
+  const submitSearch = () => {
+    console.log(typeCategory, typeCountry)
+    const fetchData = async () => {
+      const result = await axios(`https://newsapi.org/v2/top-headlines?country=${typeCountry}&category=${typeCategory}&${apiKey}`);
+      setNews(result.data.articles);
+    };
+    console.log(news)
+    fetchData();
+  };
   return (
     <div className="page">
       <h1 style={{ textAlign: "center" }}>Поиск новостей</h1>
-      <div className="section-chose"></div>
+      <div className="section-chose">
+        <div className="chose">
+          <div className="box">
+            <select onChange={e => setTypeCountry(e.target.value)}>
+              {countryArray.map(item => <option value={item}>{item}</option>)}
+            </select>
+          </div>
+        </div>
+        <div className="chose">
+          <div className="box">
+            <select onChange={e => setTypeCategory(e.target.value)}>
+              {categoryArray.map(item => <option value={item}>{item}</option>)}
+            </select>
+          </div>
+        </div>
+      </div>
+      <div className="submit-section">
+        <div onClick={submitSearch} className="button-submit">SUBMIT</div>
+      </div>
       <div className="list-cards wow fadeIn" data-wow-delay="1s">
         {news.map(item => (
           <NewsCard

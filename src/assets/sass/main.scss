@@ -60,17 +60,35 @@
   padding: 5px 0;
   font-size: 1.3rem;
 }
-
-.box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.section-chose{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
+.chose{
+  margin: 10px 25px;
+}
+.button-submit{
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  color: rgb(238, 238, 238);
+  background: radial-gradient(circle, rgba(240,87,97,1) 35%, rgba(255,88,77,1) 100%);
+  display: inline-block;
+  border-radius: 10px;
+  transition: .3s;
+}
+.button-submit:hover{
+  background: radial-gradient(circle, rgba(240,87,97,1) 100%, rgba(255,88,77,1) 35%);
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
+}
+.submit-section{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
 .box select {
-  background-color: #0563af;
-  color: white;
+  background: radial-gradient(circle, rgba(240,87,97,1) 35%, rgba(255,88,77,1) 100%);
+  color: rgb(238, 238, 238);
   padding: 12px;
   width: 250px;
   border: none;
@@ -79,28 +97,10 @@
   -webkit-appearance: button;
   appearance: button;
   outline: none;
-}
-
-.box::before {
-  content: "\f13a";
-  font-family: FontAwesome;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 20%;
-  height: 100%;
+  text-transform: uppercase;
   text-align: center;
-  font-size: 28px;
-  line-height: 45px;
-  color: rgb(238, 238, 238);
-  background-color: rgb(240,87,97);
-  pointer-events: none;
 }
 
-.box:hover::before {
-  color: rgba(238, 238, 238, 0.9);
-  background-color: rgba(240,87,97, 0.9);
-}
 
 .box select option {
   padding: 30px;
