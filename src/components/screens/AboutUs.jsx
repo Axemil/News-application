@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAddressCard, faNewspaper, faAd, faBook} from "@fortawesome/free-solid-svg-icons";
-import { faTelegram, faGithub, faReact, faSass, faCss3, faHtml5, faJs } from "@fortawesome/free-brands-svg-icons";
+import { faReact, faSass, faCss3, faHtml5, faJs } from "@fortawesome/free-brands-svg-icons";
 
 const AboutUs = () => {
   return (

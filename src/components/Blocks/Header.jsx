@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faNewspaper,faAnchor, faFlag, faAddressCard, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faNewspaper, faFlag, faAddressCard, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Drawer from '../UI/Drawer';
 import WOW from 'wow.js';
